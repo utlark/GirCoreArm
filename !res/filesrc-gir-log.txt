@@ -1,0 +1,135 @@
+Playing: filesrc location=/opt/Costa_Rica_HD_25Fps.avi ! decodebin ! autovideosink
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.489: Unhandled state change from UNKNOWN!(536870911) to UNKNOWN!(7)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.773: Unhandled state change from PLAYING to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.806: Unhandled state change from PLAYING to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.839: Unhandled state change from UNKNOWN!(5) to UNKNOWN!(6)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.839: Unhandled state change from UNKNOWN!(5) to UNKNOWN!(6)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.840: Unhandled state change from PLAYING to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.840: Unhandled state change from PLAYING to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.840: Unhandled state change from PLAYING to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.841: Unhandled state change from PLAYING to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.841: Unhandled state change from PLAYING to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.841: Unhandled state change from PLAYING to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.841: Unhandled state change from PLAYING to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.841: Unhandled state change from UNKNOWN!(5) to UNKNOWN!(6)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.841: Unhandled state change from UNKNOWN!(5) to UNKNOWN!(6)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.842: Unhandled state change from UNKNOWN!(5) to UNKNOWN!(6)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.842: Unhandled state change from UNKNOWN!(5) to UNKNOWN!(6)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.842: Unhandled state change from UNKNOWN!(5) to UNKNOWN!(6)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.842: Unhandled state change from UNKNOWN!(5) to UNKNOWN!(6)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.842: Unhandled state change from UNKNOWN!(5) to UNKNOWN!(6)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.842: Unhandled state change from UNKNOWN!(536870911) to UNKNOWN!(6)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.873: Unhandled state change from UNKNOWN!(6) to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.873: Unhandled state change from UNKNOWN!(6) to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.873: Unhandled state change from UNKNOWN!(6) to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.874: Unhandled state change from UNKNOWN!(6) to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.874: Unhandled state change from UNKNOWN!(6) to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.874: Unhandled state change from UNKNOWN!(6) to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.874: Unhandled state change from UNKNOWN!(6) to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.874: Unhandled state change from UNKNOWN!(6) to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.874: Unhandled state change from UNKNOWN!(6) to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.875: Unhandled state change from UNKNOWN!(536870911) to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.940: Unhandled state change from UNKNOWN!(5) to PLAYING
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.973: Unhandled state change from UNKNOWN!(5) to PLAYING
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.974: Unhandled state change from UNKNOWN!(5) to PLAYING
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.974: Unhandled state change from UNKNOWN!(5) to PLAYING
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.974: Unhandled state change from UNKNOWN!(5) to PLAYING
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.974: Unhandled state change from UNKNOWN!(5) to PLAYING
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.974: Unhandled state change from UNKNOWN!(5) to PLAYING
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.975: Unhandled state change from UNKNOWN!(5) to PLAYING
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.975: Unhandled state change from UNKNOWN!(5) to PLAYING
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:44.975: Unhandled state change from UNKNOWN!(536870911) to PLAYING
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.007: Unhandled state change from UNKNOWN!(536870911) to PAUSED
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.054: Unhandled state change from UNKNOWN!(536870911) to READY
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.074: Unhandled state change from UNKNOWN!(536870911) to NULL
+
+(<unknown>:525): GStreamer-CRITICAL **: 00:39:45.150: 0xb598e188: failed to release event: Bad file descriptor
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.800: Unhandled state change from UNKNOWN!(536870910) to UNKNOWN!(7)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.963: Unhandled state change from PLAYING to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.963: Unhandled state change from PLAYING to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.963: Unhandled state change from PLAYING to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.963: Unhandled state change from PLAYING to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.963: Unhandled state change from PLAYING to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.963: Unhandled state change from PLAYING to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.964: Unhandled state change from PLAYING to UNKNOWN!(5)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.964: Unhandled state change from UNKNOWN!(5) to UNKNOWN!(6)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.964: Unhandled state change from UNKNOWN!(5) to UNKNOWN!(6)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.964: Unhandled state change from UNKNOWN!(5) to UNKNOWN!(6)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.964: Unhandled state change from UNKNOWN!(5) to UNKNOWN!(6)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.964: Unhandled state change from UNKNOWN!(5) to UNKNOWN!(6)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.965: Unhandled state change from UNKNOWN!(5) to UNKNOWN!(6)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.965: Unhandled state change from UNKNOWN!(5) to UNKNOWN!(6)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.965: Unhandled state change from UNKNOWN!(6) to UNKNOWN!(7)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.965: Unhandled state change from UNKNOWN!(6) to UNKNOWN!(7)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.965: Unhandled state change from UNKNOWN!(6) to UNKNOWN!(7)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.965: Unhandled state change from UNKNOWN!(6) to UNKNOWN!(7)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.965: Unhandled state change from UNKNOWN!(6) to UNKNOWN!(7)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.966: Unhandled state change from UNKNOWN!(6) to UNKNOWN!(7)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.966: Unhandled state change from UNKNOWN!(6) to UNKNOWN!(7)
+
+(<unknown>:525): GStreamer-WARNING **: 00:39:45.966: Unhandled state change from UNKNOWN!(536870910) to UNKNOWN!(7)

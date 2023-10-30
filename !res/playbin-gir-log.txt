@@ -1,0 +1,3 @@
+Playing: playbin uri=playbin uri=file:///opt/Costa_Rica_HD_25Fps.avi
+
+(<unknown>:495): GStreamer-WARNING **: 00:37:44.820: Unhandled state change from UNKNOWN!(536870911) to UNKNOWN!(7)
