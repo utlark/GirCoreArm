@@ -1,0 +1,6 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Publish Arm" type="DotNetFolderPublish" factoryName="Publish to folder">
+    <riderPublish configuration="Release" delete_existing_files="true" platform="Any CPU" produce_single_file="true" runtime="linux-arm" self_contained="true" target_folder="$PROJECT_DIR$/GirCoreArm/bin/Publish/linux-arm" target_framework="net6.0" trim_unused_assemblies="true" uuid_high="-1489771419609906673" uuid_low="-5329070377802676374" />
+    <method v="2" />
+  </configuration>
+</component>
