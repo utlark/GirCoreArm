@@ -19,7 +19,7 @@ internal static class Program
             return;
         }
 
-        var pipelineString = args.Length > 1 && !string.IsNullOrEmpty(args[1]) ? args[1] : "filesrc location=/home/dash/Downloads/Costa_Rica_HD_25Fps.avi ! decodebin ! autovideosink";
+        var pipelineString = args.Length > 1 && !string.IsNullOrEmpty(args[1]) ? args[1] : "playbin uri=playbin uri=http://ftp.halifax.rwth-aachen.de/blender/demo/movies/ToS/tears_of_steel_720p.mov";
         Console.WriteLine($"Playing: {pipelineString}");
 
         switch (args[0])
