@@ -29,16 +29,13 @@
 
 <!--    <ItemGroup>
         <Reference Include="GLib-2.0">
-            <HintPath>..\..\..\..\Downloads\gir.core\src\Libs\GstBase-1.0\bin\Debug\net6.0\GLib-2.0.dll</HintPath>
+            <HintPath>..\..\GirCore\src\Libs\Gst-1.0\bin\Debug\net6.0\GLib-2.0.dll</HintPath>
         </Reference>
         <Reference Include="GObject-2.0">
-            <HintPath>..\..\..\..\Downloads\gir.core\src\Libs\GstBase-1.0\bin\Debug\net6.0\GObject-2.0.dll</HintPath>
+            <HintPath>..\..\GirCore\src\Libs\Gst-1.0\bin\Debug\net6.0\GObject-2.0.dll</HintPath>
         </Reference>
         <Reference Include="Gst-1.0">
-            <HintPath>..\..\..\..\Downloads\gir.core\src\Libs\GstBase-1.0\bin\Debug\net6.0\Gst-1.0.dll</HintPath>
-        </Reference>
-        <Reference Include="GstBase-1.0">
-            <HintPath>..\..\..\..\Downloads\gir.core\src\Libs\GstBase-1.0\bin\Debug\net6.0\GstBase-1.0.dll</HintPath>
+            <HintPath>..\..\GirCore\src\Libs\Gst-1.0\bin\Debug\net6.0\Gst-1.0.dll</HintPath>
         </Reference>
     </ItemGroup>-->
 
