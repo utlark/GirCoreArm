@@ -5,10 +5,37 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>disable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <AssemblyName>GstSharp</AssemblyName>
+        <RootNamespace>GstSharp</RootNamespace>
+        <LangVersion>10</LangVersion>
+        <Company>utlark</Company>
+        <Product>GstSharp</Product>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+        <DebugType>none</DebugType>
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <Prefer32bit>false</Prefer32bit>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="GirCore.Gst-1.0" Version="0.4.0"/>
+        <Reference Include="GLib-2.0">
+            <HintPath>..\..\..\..\Downloads\gir.core\src\Libs\GstBase-1.0\bin\Debug\net6.0\GLib-2.0.dll</HintPath>
+        </Reference>
+        <Reference Include="GObject-2.0">
+            <HintPath>..\..\..\..\Downloads\gir.core\src\Libs\GstBase-1.0\bin\Debug\net6.0\GObject-2.0.dll</HintPath>
+        </Reference>
+        <Reference Include="Gst-1.0">
+            <HintPath>..\..\..\..\Downloads\gir.core\src\Libs\GstBase-1.0\bin\Debug\net6.0\Gst-1.0.dll</HintPath>
+        </Reference>
+        <Reference Include="GstBase-1.0">
+            <HintPath>..\..\..\..\Downloads\gir.core\src\Libs\GstBase-1.0\bin\Debug\net6.0\GstBase-1.0.dll</HintPath>
+        </Reference>
     </ItemGroup>
 
 </Project>
