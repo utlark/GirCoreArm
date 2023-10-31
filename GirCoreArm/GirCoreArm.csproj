@@ -24,6 +24,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="GirCore.Gst-1.0" Version="0.4.0" />
+    </ItemGroup>
+
+<!--    <ItemGroup>
         <Reference Include="GLib-2.0">
             <HintPath>..\..\..\..\Downloads\gir.core\src\Libs\GstBase-1.0\bin\Debug\net6.0\GLib-2.0.dll</HintPath>
         </Reference>
@@ -36,6 +40,6 @@
         <Reference Include="GstBase-1.0">
             <HintPath>..\..\..\..\Downloads\gir.core\src\Libs\GstBase-1.0\bin\Debug\net6.0\GstBase-1.0.dll</HintPath>
         </Reference>
-    </ItemGroup>
+    </ItemGroup>-->
 
 </Project>
