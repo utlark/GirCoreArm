@@ -1,0 +1,129 @@
+using System;
+using GObject;
+using Gst;
+using Caps = Gst.Internal.Caps;
+using Functions = Gst.Functions;
+using Structure = Gst.Internal.Structure;
+
+namespace GstSharp;
+
+public class ArmPipeline
+{
+    public ArmPipeline(bool debugActive = false, DebugLevel debugLevel = DebugLevel.Warning)
+    {
+        if (debugActive)
+        {
+            Functions.DebugSetActive(debugActive);
+            Functions.DebugSetDefaultThreshold(debugLevel);
+        }
+
+        // ReSharper disable StringLiteralTypo
+        RtspSrc = ElementFactory.Make("rtspsrc", null);
+        Watchdog = ElementFactory.Make("watchdog", null);
+        RtpH264DePay = ElementFactory.Make("rtph264depay", null);
+        H264Parse = ElementFactory.Make("h264parse", null);
+        ImxVpuDecoder = ElementFactory.Make("imxvpudec", null);
+        ImxG2DVideoSink = ElementFactory.Make("imxg2dvideosink", null);
+        Pipeline = Gst.Pipeline.New(null);
+        // ReSharper restore StringLiteralTypo
+
+        if (Pipeline == null || RtspSrc == null || Watchdog == null || RtpH264DePay == null || H264Parse == null || ImxVpuDecoder == null || ImxG2DVideoSink == null)
+        {
+            Program.PrintError("Not all elements could be created");
+            throw new NullReferenceException("Not all elements could be created");
+        }
+
+        var bin = (Bin)Pipeline;
+        bin.Add(RtspSrc);
+        bin.Add(Watchdog);
+        bin.Add(RtpH264DePay);
+        bin.Add(H264Parse);
+        bin.Add(ImxVpuDecoder);
+        bin.Add(ImxG2DVideoSink);
+
+        if (!Watchdog.Link(RtpH264DePay) || !RtpH264DePay.Link(H264Parse) || !H264Parse.Link(ImxVpuDecoder) || !ImxVpuDecoder.Link(ImxG2DVideoSink))
+        {
+            Program.PrintError("Elements could not be linked");
+            throw new NullReferenceException("Elements could not be linked");
+        }
+
+        //RtspSrc.SetProperty("location", new Value("rtsp://10.59.219.12/h264"));
+        RtspSrc.SetProperty("location", new Value("rtsp://admin:admin@10.15.51.120/0"));
+        RtspSrc.SetProperty("latency", new Value(300));
+        Watchdog.SetProperty("timeout", new Value(10000));
+
+        RtspSrc.OnPadAdded += OnPadAdded;
+    }
+
+    private Element? Pipeline { get; }
+    private Element? RtspSrc { get; }
+    private Element? Watchdog { get; }
+    private Element? RtpH264DePay { get; }
+    private Element? H264Parse { get; }
+    private Element? ImxVpuDecoder { get; }
+    private Element? ImxG2DVideoSink { get; }
+
+    public void Play()
+    {
+        var ret = Pipeline!.SetState(State.Playing);
+        switch (ret)
+        {
+            case StateChangeReturn.Failure:
+                Program.PrintError("Unable to set the pipeline to the playing state");
+                Pipeline.Unref();
+                throw new Exception("Unable to set the pipeline to the playing state");
+            case StateChangeReturn.Success:
+                Console.WriteLine($"Pipeline state change return: '{ret}'");
+                break;
+            case StateChangeReturn.Async:
+                Console.WriteLine($"Pipeline state change return: '{ret}'");
+                break;
+            case StateChangeReturn.NoPreroll:
+                Console.WriteLine($"Pipeline state change return: '{ret}'");
+                break;
+            default:
+                Program.PrintError("Unexpected message received");
+                break;
+        }
+
+        Pipeline.GetBus()!.WaitForEndOrError();
+        Pipeline.SetState(State.Null);
+    }
+
+    private void OnPadAdded(Element sender, Element.PadAddedSignalArgs signalArgs)
+    {
+        var sinkPad = Watchdog?.GetStaticPad("sink");
+        if (sinkPad == null)
+            throw new NullReferenceException("Unable to get the sink pad from 'Watchdog' element");
+
+        var newPad = signalArgs.NewPad;
+        Program.PrintColored($"Received new pad '{newPad.Name}' from '{sender.Name}'", ConsoleColor.Yellow);
+
+        if (sinkPad.IsLinked())
+        {
+            Program.PrintColored("We are already linked. Ignoring", ConsoleColor.Yellow);
+            return;
+        }
+
+        var newPadCaps = newPad.GetCurrentCaps();
+        var newPadStruct = Caps.GetStructure(newPadCaps.Handle, 0);
+        var newPadType = Structure.GetName(newPadStruct);
+        var newPadTypeString = newPadType.ConvertToString();
+        if (!newPadTypeString.Equals("application/x-rtp"))
+        {
+            Program.PrintColored($"It has type '{newPadTypeString}' which is not rtp video. Ignoring", ConsoleColor.Yellow);
+            return;
+        }
+
+        var ret = newPad.Link(sinkPad);
+        if (ret < PadLinkReturn.Ok)
+        {
+            Program.PrintError($"Type is '{newPadTypeString}' but link failed");
+        }
+        else
+        {
+            Program.PrintColored($"Link succeeded (type '{newPadTypeString}')", ConsoleColor.Yellow);
+            Watchdog?.SetProperty("timeout", new Value(1000));
+        }
+    }
+}

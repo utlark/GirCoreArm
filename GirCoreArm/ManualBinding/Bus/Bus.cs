@@ -1,5 +1,6 @@
 using System;
 using GstSharp.ManualBinding.Bus.Internal;
+using JetBrains.Annotations;
 
 namespace GstSharp.ManualBinding.Bus;
 
@@ -14,11 +15,17 @@ public class Bus
 
     public void WaitForEndOrError()
     {
-        TimedPopFiltered(ulong.MaxValue);
+        TimedPopFiltered(ulong.MaxValue, MessageType.Eos | MessageType.Error);
     }
 
-    public void TimedPopFiltered(ulong timeout)
+    [UsedImplicitly]
+    public IntPtr TimedPopFiltered(ulong timeout, MessageType types)
     {
-        Methods.TimedPopFiltered(_handle, timeout, MessageType.Eos | MessageType.Error);
+        return Methods.TimedPopFiltered(_handle, timeout, types);
+    }
+
+    public IntPtr PopFiltered(MessageType types)
+    {
+        return Methods.PopFiltered(_handle, types);
     }
 }

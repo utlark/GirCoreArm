@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace GstSharp.ManualBinding;
 
@@ -11,6 +12,7 @@ public enum State
     Playing = 4
 }
 
+[SuppressMessage("ReSharper", "IdentifierTypo")]
 public enum StateChangeReturn
 {
     Failure = 0,

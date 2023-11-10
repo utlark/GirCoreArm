@@ -14,4 +14,13 @@ public static class Methods
     /// <returns>Transfer ownership: Full Nullable: True</returns>
     [DllImport(ImportResolver.Library, EntryPoint = "gst_bus_timed_pop_filtered")]
     public static extern IntPtr TimedPopFiltered(IntPtr bus, ulong timeout, MessageType types);
+
+    /// <summary>
+    ///     Calls native method gst_bus_pop_filtered.
+    /// </summary>
+    /// <param name="bus">Transfer ownership: None Nullable: False</param>
+    /// <param name="types">Transfer ownership: None Nullable: False</param>
+    /// <returns>Transfer ownership: Full Nullable: True</returns>
+    [DllImport(ImportResolver.Library, EntryPoint = "gst_bus_pop_filtered")]
+    public static extern IntPtr PopFiltered(IntPtr bus, MessageType types);
 }
